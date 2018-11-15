@@ -1,0 +1,125 @@
+@include xs {
+    .container {
+        margin: 0 auto;
+    }
+    header {
+        background-color: $download-color;
+        opacity: .8;
+        top: 0px;
+        .menu {
+            float: none;
+            width: 100%;
+            text-align: center;
+            ul {
+                padding: 15px 0;
+            }
+        }
+        .logo {
+            float: none;
+            width: 100%;
+            h4 {
+                text-align: center;
+                padding: 15px 0;
+            }
+        }
+    }
+    .home {
+        padding: 0 15px;
+        .home-content {
+            p:first-child {
+                font-size: 22px;
+                text-align: center;
+            }
+            span {
+                margin: 0 auto;
+            }
+            p {
+                font-size: 15px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+    .needs {
+        .what {
+            p:first-child {
+                font-size: 24px;
+            }
+            p {
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+    }
+    .services {
+        height: auto;
+        margin: 15px 0;
+        .serv {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+    }
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        img {
+            margin-bottom: 5px;
+        }
+    }
+    .touch {
+        p:first-child {
+            font-size: 20px;
+        }
+        p {
+            padding: 6px 8px;
+        }
+        .contact {
+            width: 80%;
+        }
+    }
+}
+
+@include lg {
+    .container {
+        width: 1200px;
+    }
+    .services {
+        .serv {
+            width: calc(100% / 4);
+        }
+    }
+}
+
+@include md {
+    .container {
+        width: 970px;
+    }
+    .home {
+        padding: 0 15px;
+        .home-content {
+            p:first-child {
+                font-size: 25px;
+                text-align: center;
+            }
+            span {
+                margin: 0 auto;
+            }
+            p {
+                font-size: 18px;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+    .services {
+        .serv {
+            width: calc(100% / 2);
+            margin-bottom: 5px;
+        }
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        img {
+            margin-bottom: 5px;
+        }
+    }
+}

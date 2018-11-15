@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel="stylesheet" href="dist/css/main.css")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous")
+        title peter
+    body
+    // start all
+    .all
+     //start header
+     header
+      .container
+        //start logo
+        section.logo
+         h4 START BOOTSTRAP
+        //start menu
+        section.menu
+         -var list = ['Home','Service','About','Contact']
+          ul
+           each x in list
+            li
+             a(href='#')=x
+        //end menu
+     //end header
+     //start home
+     .home
+      .container
+       .home-content
+        p Your favourite source of <br/> free bootstrap themes
+        span
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        button find out more
+     //end home
+     //start what you need
+     .needs
+      .container
+       .what
+        p We've got what you need
+        span 
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur vel sequi optio dolore commodi suscipit quasi accusantium rerum facilis iure facere voluptates dignissimos error delectus, totam ex nesciunt sit.
+        button get started
+     //end what you need
+     //service
+     section.service
+      section.container
+       p.head at Your service
+       span.line
+       section.services
+        -for(x=0;x<4;x++)
+         section.serv
+          if x== 0
+           i(class="far fa-gem")
+          else if x== 1
+           i(class="fas fa-running")
+          else if x== 2
+           i(class="far fa-gem")
+          else
+           i(class="fas fa-heart")
+          h2 ready to ship
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, temporibus labore
+     //end service
+     //start gallery
+     section.gallery
+      -for(x=0;x<6;x++)
+       section.img
+        img(src="./dist/img/1.jpg", alt="alt")
+     //end gallery
+     //.clearfix
+     //start download
+     section.downolad
+      section.container
+       h2 free download at bootstrap!
+       button Download Now!
+     //end download
+     // start
+     section.touch
+      .container
+       p Let's Get in Touch
+       span.line
+       p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius consequuntur vel sequi optio dolore commodi suscipit quasi accusantium rerum facilis iure facere voluptates dignissimos error delectus, totam ex nesciunt sit.
+       .contact
+        .phone
+         i(class="fas fa-phone")
+         span 226-565-665
+        .email 
+         i(class="fas fa-envelope-open")
+         span peterramsis@yahoo.com
+
+     // end 
+    //end all
+    
+    script(src="dist/js/jquery.min.js")
+    script(src="dist/js/script.js")
+     
+    

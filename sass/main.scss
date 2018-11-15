@@ -1,0 +1,296 @@
+$primary-color: #f05f40;
+$download-color:#212529;
+@import "mixin";
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container-fluid {
+    margin: 0 auto;
+    width: 100%;
+}
+
+%float-left {
+    float: left;
+    width: 50%;
+}
+
+%span {
+    display: inline-block;
+    width: 50px;
+    height: 3px;
+    background-color: $primary-color;
+}
+
+%button {
+    border: none;
+    width: 150px;
+    padding: 15px 10px;
+    border-radius: 25px;
+}
+
+%element-center {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+%icon {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+
+@mixin trans {
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*start header*/
+
+header {
+    overflow: hidden;
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    left: 0;
+    .logo {
+        @extend %float-left;
+        h4 {
+            color: #fff;
+        }
+    }
+    .menu {
+        @extend %float-left;
+        ul {
+            li {
+                display: inline;
+                padding: 0 15px;
+                a {
+                    color: #fff;
+                    @include trans;
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*end header*/
+
+
+/*home*/
+
+.home {
+    height: 100vh;
+    @extend %element-center;
+    background: url("../img/header.jpg");
+    background-size: cover;
+    .home-content {
+        p:first-child {
+            font-size: 55px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        span {
+            @extend %span;
+        }
+        p {
+            margin: 10px 0;
+            color: $download-color;
+            font-size: 20px;
+            color: #fff;
+        }
+        button {
+            @extend %button;
+            background-color: $primary-color;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/*end home*/
+
+
+/*start needs*/
+
+.needs {
+    background-color: $primary-color;
+    height: 400px;
+    @extend %element-center;
+    .what {
+        width: 60%;
+        p:first-child {
+            color: #fff;
+            font-size: 25px;
+        }
+        span {
+            @extend %span;
+            background-color: #fff;
+        }
+        p {
+            color: #f6bec6;
+            margin: 10px 0;
+        }
+        button {
+            @extend %button;
+            background-color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/*end needs*/
+
+
+/*start service*/
+
+.service {
+    height: auto;
+    padding: 40px 0;
+    .head {
+        text-transform: capitalize;
+        color: $download-color;
+        font-size: 25px;
+    }
+    .line {
+        @extend %span;
+    }
+    @extend %element-center;
+    .services {
+        margin-top: 60px;
+        .serv {
+            float: left;
+            i {
+                color: $primary-color;
+                font-size: 48px;
+            }
+            h2 {
+                margin: 5px 0;
+                color: $download-color;
+                font-weight: 400;
+            }
+            p {
+                color: #7a8089;
+            }
+        }
+    }
+}
+
+
+/*end service*/
+
+
+/**/
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 0;
+    img {
+        width: 100%;
+    }
+}
+
+
+/**/
+
+
+/**/
+
+.downolad {
+    height: auto;
+    padding: 40px 0;
+    background-color: $download-color;
+    clear: both;
+    @extend %element-center;
+    color: #fff;
+    h2 {
+        text-transform: capitalize;
+        margin: 20px 0;
+    }
+    button {
+        @extend %button;
+        background-color: #fff;
+        font-weight: bold;
+    }
+}
+
+
+/**/
+
+
+/**/
+
+.touch {
+    height: auto;
+    padding: 40px 0;
+    @extend %element-center;
+    p:first-child {
+        font-size: 25px;
+    }
+    .line {
+        @extend %span;
+        background-color: $primary-color;
+    }
+    p {
+        color: $download-color;
+        margin: 10px 0;
+        text-align: center;
+        padding: 6px 188px;
+    }
+    .contact {
+        width: 60%;
+        .phone {
+            i {
+                @extend %icon;
+                color: #212529 !important;
+            }
+            @extend %float-left;
+            color: $download-color;
+        }
+        .email {
+            i {
+                @extend %icon;
+                color: #212529 !important;
+            }
+            @extend %float-left;
+            color: $primary-color;
+        }
+    }
+}
+
+
+/**/
+
+
+/*media*/
+
+@import "media";
+
+/*media*/
